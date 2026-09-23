@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html class="dark" lang="es" style="">
+<html class="dark" lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="web_standard" name="shell-type"/>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
 <title>De Mí Para Ti — Amor y Amistad</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Space+Grotesk:wght@400;600;700;800&amp;family=Permanent+Marker&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Space+Grotesk:wght@400;600;700;800&amp;family=Permanent+Marker&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <style>
   @layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;background-color:#0e0e12;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.font-spray{font-family:'Permanent+Marker',cursive;}.stroke-black-sm{-webkit-text-stroke:2px #000;}.stroke-black-lg{-webkit-text-stroke:4px #000;}.grunge-border{box-shadow:0 0 0 3px #131317,0 0 0 5px #d9ef00;}
 </style>
@@ -144,7 +144,7 @@ tailwind.config = {
 </div>
 </div>
 <div class="relative z-10 flex flex-col items-center text-center max-w-5xl mx-auto px-margin-mobile md:px-margin">
-<!-- Badge Estilo Cinta de Precaución / Corona Graffiti adaptado para celular -->
+<!-- Badge Estilo Cinta de Precaución / Corona Graffiti -->
 <div class="flex flex-col sm:flex-row items-center justify-center text-center gap-3 px-6 md:px-8 py-4 md:py-3.5 rounded-3xl md:rounded-full bg-black/90 border-2 border-primary shadow-[0_0_30px_rgba(217,239,0,0.6)] mb-space-md hover:scale-[1.03] transition-all w-full md:w-auto">
   <span class="text-primary text-2xl leading-none animate-bounce">👑</span>
   <span class="font-mono text-sm md:text-base text-primary font-bold tracking-widest uppercase">// LEE CUIDADOSAMENTE, SI NO LO HACES -1.000 DE AURA BOOMER</span>
@@ -158,7 +158,7 @@ tailwind.config = {
 
 <!-- Título Monumental Graffiti Spray -->
 <h1 class="font-headline-lg md:font-display-xl text-headline-lg-mobile md:text-display-xl uppercase tracking-wider text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-        ¿ESTÁS PREPARADO PARA <br/>
+        ¿ESTÁS PREPARADO PARA <br>
 <span class="inline-block relative mt-1">
 <span class="relative z-10 px-4 py-1 bg-black text-primary border-4 border-primary rotate-[-2deg] inline-block shadow-[8px_8px_0_#ff4a8d] tracking-wide">
             UNA BATALLA?
@@ -180,9 +180,8 @@ tailwind.config = {
 </div>
 </div>
 <!-- Visual Cinematic Showcase (Arena Callejera / Guerrero) -->
-<div class="relative z-10 mt-space-xl max-w-5xl mx-auto px-margin-mobile md:px-0">
-<div class="relative rounded-2xl overflow-hidden bg-black border-4 border-surface-container-high shadow-[0_0_50px_rgba(217,239,0,0.2)]" id="hero-video-wrapper">
-<!-- Stencils y Slangs en esquinas HUD -->
+<div class="relative z-10 mt-space-xl max-w-md mx-auto px-margin-mobile md:px-0 flex justify-center">
+<div class="relative rounded-2xl overflow-hidden bg-black border-4 border-surface-container-high shadow-[0_0_50px_rgba(217,239,0,0.2)] w-full max-w-[420px] aspect-[9/16]" id="hero-video-wrapper">
 <div class="absolute top-4 left-4 z-20 flex items-center gap-2 bg-black/90 border border-primary/50 text-primary font-mono text-label-md px-3 py-1.5 rounded shadow-md">
 <span class="material-symbols-outlined text-[16px]">sports_martial_arts</span>
 <span class="">ZONA: CYBER_STREET_ARENA_01</span>
@@ -190,16 +189,17 @@ tailwind.config = {
 <div class="absolute top-4 right-4 z-20 flex items-center gap-1.5 bg-secondary text-black font-headline-md text-xs px-3 py-1.5 rounded rotate-1 shadow-md uppercase">
 <span class="">⚡ BUENA GENTE MEJOR PLAN</span>
 </div>
-<!-- Botón flotante para activar/desactivar sonido -->
-<button class="absolute top-16 right-4 z-30 flex items-center gap-2 px-3.5 py-2 rounded-xl bg-primary text-black border-2 border-black font-mono text-xs font-bold tracking-wider uppercase shadow-[0_0_20px_rgba(217,239,0,0.8)] hover:bg-[#ebff1a] hover:scale-105 transition-all cursor-pointer" id="toggle-sound-btn">
+<button class="absolute top-16 right-4 z-30 flex items-center gap-2 px-3.5 py-2 rounded-xl border-2 border-primary font-mono text-xs font-bold tracking-wider uppercase shadow-[0_0_20px_rgba(217,239,0,0.6)] hover:bg-primary hover:text-black transition-all cursor-pointer bg-primary text-black" id="toggle-sound-btn">
 <span class="material-symbols-outlined text-[18px]" id="sound-icon">volume_up</span>
-<span id="sound-btn-text">AUDIO ACTIVADO 🔊</span>
+<span class="" id="sound-btn-text">AUDIO ON (100%)</span>
 </button>
 <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40 z-10 pointer-events-none"></div>
 <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60 z-10 pointer-events-none"></div>
-<!-- Video con PRELOAD="NONE" para ahorrar datos en celulares -->
-<video class="w-full h-[360px] md:h-[580px] object-cover object-center scale-[1.01] hover:scale-[1.03] transition-transform duration-700 rounded-xl" controls="" id="hero-street-video" loop="" playsinline="" preload="none"><source src="https://res.cloudinary.com/urzwziyj/video/upload/v1790143565/JHOJAN_Y_ALEJANDRO.mp4" type="video/mp4"/>Tu navegador no soporta el formato de video.</video>
-<!-- Badges Callejeros Inferiores -->
+<!-- PRELOAD="NONE" agregado para evitar descargas pesadas en datos móviles -->
+<video class="w-full h-full object-cover object-center scale-[1.01] hover:scale-[1.03] transition-transform duration-700 rounded-xl" controls playsinline preload="none" id="hero-street-video" loop>
+  <source src="https://res.cloudinary.com/urzwziyj/video/upload/v1790169290/JHOJAN_Y_ALEJANDRO_1.mp4" type="video/mp4">
+  Tu navegador no soporta el formato de video.
+</video>
 <div class="absolute bottom-6 left-6 z-20 flex flex-wrap items-center gap-space-sm pointer-events-none">
 <div class="flex items-center gap-space-xs px-4 py-2.5 rounded-xl bg-black/90 border-2 border-primary backdrop-blur-md shadow-lg pointer-events-auto">
 <span class="text-primary text-xl">👑</span>
@@ -244,53 +244,6 @@ tailwind.config = {
 </div>
 </a>
 </div>
-<!-- Contadores Street Graffiti Glassmorphic -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter max-w-5xl mx-auto">
-<!-- Stat 1 -->
-<div class="relative rounded-2xl bg-surface-container/90 border-2 border-zinc-800 p-space-lg shadow-xl hover:border-primary hover:-translate-y-1 transition-all duration-200 group">
-<div class="flex items-center justify-between mb-space-sm">
-<span class="font-mono text-label-md text-primary uppercase tracking-widest font-bold">// AURA ACUMULADA</span>
-<span class="material-symbols-outlined text-primary text-[24px]">electric_bolt</span>
-</div>
-<div class="font-headline-lg text-headline-xl text-white tracking-tight group-hover:text-primary transition-colors">14.8M</div>
-<p class="font-body-sm text-zinc-400 mt-space-xs">Farmeo masivo en la calle. Respaldo de corillo activo.</p>
-<div class="w-full bg-surface-container-highest h-2 rounded-full mt-space-md overflow-hidden p-0.5 border border-zinc-700">
-<div class="bg-primary h-full w-[88%] rounded-full shadow-[0_0_10px_#d9ef00]"></div>
-</div>
-</div>
-<!-- Stat 2 -->
-<div class="relative rounded-2xl bg-surface-container/90 border-2 border-zinc-800 p-space-lg shadow-xl hover:border-secondary hover:-translate-y-1 transition-all duration-200 group">
-<div class="flex items-center justify-between mb-space-sm">
-<span class="font-mono text-label-md text-secondary uppercase tracking-widest font-bold">// GENTE FARMEANDO AURA</span>
-<span class="material-symbols-outlined text-secondary text-[24px]">groups</span>
-</div>
-<div class="font-headline-lg text-headline-xl text-white tracking-tight group-hover:text-secondary transition-colors">84,210</div>
-<p class="font-body-sm text-zinc-400 mt-space-xs">Parchados listos para llegar a romperla con toda.</p>
-<div class="w-full bg-surface-container-highest h-2 rounded-full mt-space-md overflow-hidden p-0.5 border border-zinc-700">
-<div class="bg-secondary h-full w-[94%] rounded-full shadow-[0_0_10px_#ff4a8d]"></div>
-</div>
-</div>
-<!-- Stat 3 -->
-<div class="relative rounded-2xl bg-surface-container/90 border-2 border-zinc-800 p-space-lg shadow-xl hover:border-white hover:-translate-y-1 transition-all duration-200 group">
-<div class="flex items-center justify-between mb-space-sm">
-<span class="font-mono text-label-md text-white uppercase tracking-widest font-bold">// MULTIPLICADOR DE FLOW</span>
-<span class="material-symbols-outlined text-primary text-[24px]">local_fire_department</span>
-</div>
-<div class="font-headline-lg text-headline-xl text-primary tracking-tight">x5.0 PINTA</div>
-<p class="font-body-sm text-zinc-400 mt-space-xs">Bonus extra si traes la pinta más lámpara del parche.</p>
-<div class="w-full bg-surface-container-highest h-2 rounded-full mt-space-md overflow-hidden p-0.5 border border-zinc-700">
-<div class="bg-gradient-to-r from-primary to-secondary h-full w-[78%] rounded-full shadow-[0_0_10px_#d9ef00]"></div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="relative w-full py-space-xl" id="transmision-video">
-<div class="max-w-5xl mx-auto">
-<div class="text-center mb-space-lg"></div>
-<div class="relative w-full rounded-2xl overflow-hidden bg-black border-4 border-zinc-800 shadow-[0_0_40px_rgba(255,74,141,0.25)] group" id="mockup-player-container">
-</div>
-</div>
 </section>
 
 <!-- SECCIÓN 4: INVITACIÓN OFICIAL CALLEJERA & REGISTRO -->
@@ -308,13 +261,13 @@ tailwind.config = {
         </p>
 </div>
 
-<!-- Grid Asimétrico: Póster Real (IMAGE_7) + Datos Clave + Formulario -->
+<!-- Grid Asimétrico: Póster Real + Datos Clave + Formulario -->
 <div class="flex flex-col items-center gap-space-xl max-w-5xl mx-auto w-full">
   <div class="flex flex-col items-center w-full mx-auto px-2">
     <div class="relative w-full max-w-[450px] mx-auto rounded-2xl p-2 bg-gradient-to-b from-primary via-zinc-800 to-secondary shadow-[0_0_50px_rgba(217,239,0,0.35)] hover:shadow-[0_0_60px_rgba(255,74,141,0.5)] transition-all duration-300">
       <div class="relative w-full rounded-xl overflow-hidden bg-black flex justify-center">
-        <!-- Etiqueta img arreglada para evitar desbordamientos horizontales -->
-        <img alt="Póster oficial de invitación: Estás Invitado. Sábado 26 de Septiembre 11 AM en Casa de Eventos Quiroga-López. Llegué, llegué, yogo yogo!" class="block w-full max-w-[500px] h-auto rounded-lg object-contain shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8pTccIHRhGpHmNdcJDLGbfSbJQWP4IK-wO2BPfc5ZgXfKyCAmjNG4EBy_womppumTJOR_JA2AY2yaaesA0TNrRUzHZoMGBrMjC4s9Uu7BCENuSOadYZyKCUBrl0aKXnju1PofuNhe0OQU8fbfUeffyHFO1XBUGgCyfjd4v0ze0SvxvxIG5M49sve0FHjWW_RHcGe1nuhlndZncLvv1p4RYFgosM6aHOjDUsmUYffUnHS2mJh70Clf8x_kVp8nE1xWsA"/>
+        <!-- PÓSTER OPTIMIZADO PARA NO ROMPER LA CAJA EN CELULARES -->
+        <img alt="Póster oficial de invitación: Estás Invitado." class="block w-full max-w-[500px] h-auto rounded-lg object-contain shadow-2xl transition-all duration-300 mx-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyYbnrv01IZjlJB243dhaqHCmnm_Kl39BEmdYkqG_3sOgDNkY7Lzjr2d_txcqk_dOkr1k7fICQvtaGiOsIrMNAI-h-hDalI27JmDFnxKmRIWDgRh_saGO5KWfplicfM6p-5WyvqLOH_7Ck3MYpycY8F4trhT1RAQClj4pl-l6i1y6R55zRpVgo3fBs95U7UsTEx_cgsDbILfMqwMHbGGNK6YKUi7aYFnUZP2KyGovgxKrvPWKo3WnGnU1tqb3Mtd8Xzw">
       </div>
     </div>
     <div class="mt-4 px-6 py-3 bg-black/90 border border-primary/40 rounded-xl text-center shadow-md w-full max-w-[380px] mx-auto">
@@ -330,14 +283,14 @@ tailwind.config = {
         <span class="px-2 py-0.5 rounded bg-secondary text-black font-headline-md text-xs uppercase font-bold">TICINCO B-DAY</span>
       </div>
       <div class="mb-4 p-2.5 rounded-lg bg-black/90 border border-primary/50 flex items-center justify-between">
-        <div class="flex items-center gap-2"><span class="text-primary text-base">👑</span><span class="font-mono text-xs uppercase text-zinc-300 font-bold tracking-wider">ANFITRIONES DEL DESMADRE:</span></div>
+        <div class="flex items-center gap-2"><span class="text-primary text-base">👑</span><span class="font-mono text-xs uppercase text-zinc-300 font-bold tracking-wider">ANFITRIONES DEL PARCHE:</span></div>
         <span class="font-headline-md text-sm text-primary font-bold tracking-wide">JHOJAN &amp; ALEJANDRO</span>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div class="bg-black/80 p-3.5 rounded-xl border border-zinc-800">
           <div class="font-mono text-[11px] text-zinc-400 uppercase">📅 FECHA &amp; HORA</div>
           <div class="font-headline-md text-base text-white mt-1">Sábado 26 de Septiembre</div>
-          <div class="font-mono text-sm text-primary font-bold mt-0.5">11:00 AM PUNTUAL</div>
+          <div class="font-mono text-sm text-primary font-bold mt-0.5">11:30 AM PUNTUAL</div>
         </div>
         <div class="bg-black/80 p-3.5 rounded-xl border border-zinc-800">
           <div class="font-mono text-[11px] text-zinc-400 uppercase">🏠 LUGAR EXACTO</div>
@@ -365,14 +318,14 @@ tailwind.config = {
         <div class="bg-surface-container p-2 rounded-lg border border-zinc-800"><div class="font-headline-md text-2xl text-white font-bold" id="count-days">02</div><div class="font-mono text-[9px] uppercase text-zinc-400">DÍAS</div></div>
         <div class="bg-surface-container p-2 rounded-lg border border-zinc-800"><div class="font-headline-md text-2xl text-white font-bold" id="count-hours">14</div><div class="font-mono text-[9px] uppercase text-zinc-400">HORAS</div></div>
         <div class="bg-surface-container p-2 rounded-lg border border-zinc-800"><div class="font-headline-md text-2xl text-white font-bold" id="count-mins">38</div><div class="font-mono text-[9px] uppercase text-zinc-400">MINS</div></div>
-        <div class="bg-surface-container p-2 rounded-lg border border-zinc-800"><div class="font-headline-md text-2xl text-primary font-bold" id="count-secs">07</div><div class="font-mono text-[9px] uppercase text-zinc-400">SEGS</div></div>
+        <div class="bg-surface-container p-2 rounded-lg border border-zinc-800"><div class="font-headline-md text-2xl text-primary font-bold" id="count-secs">45</div><div class="font-mono text-[9px] uppercase text-zinc-400">SEGS</div></div>
       </div>
     </div>
     
     <form class="flex flex-col gap-3.5 bg-surface-container/90 border-2 border-zinc-800 p-5 rounded-2xl shadow-xl" onsubmit="event.preventDefault(); alert('¡Pase confirmado! Prepárate para el 26 de Septiembre en Quiroga-López. ¡A farmear aura!');">
       <div class="flex flex-col gap-1">
         <label class="font-mono text-label-sm uppercase tracking-wider text-zinc-300 flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">badge</span>Tu Nombre o Apodo</label>
-        <input class="w-full bg-black border border-zinc-700 px-4 py-2.5 rounded-lg font-body-md text-white placeholder:text-zinc-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Ej. El Duro del Flow / Santi" required="" type="text"/>
+        <input class="w-full bg-black border border-zinc-700 px-4 py-2.5 rounded-lg font-body-md text-white placeholder:text-zinc-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Ej. El Duro del Flow / Santi" required="" type="text">
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div class="flex flex-col gap-1">
@@ -410,7 +363,7 @@ tailwind.config = {
       const soundIcon = document.getElementById('sound-icon');
       const soundText = document.getElementById('sound-btn-text');
       
-      // OPTIMIZACIÓN: Detectar si es móvil para no asfixiar los datos con Auto-Play pesado
+      // OPTIMIZACIÓN: Detectar si es celular para evitar Auto-Play que bloquea la carga
       const isMobile = window.innerWidth < 768;
 
       function updateSoundUI() {
@@ -424,7 +377,7 @@ tailwind.config = {
           }
         } else {
           if (soundIcon) soundIcon.innerText = 'volume_up';
-          if (soundText) soundText.innerText = 'AUDIO ACTIVADO 🔊';
+          if (soundText) soundText.innerText = 'AUDIO ON (100%)';
           if (soundBtn) {
             soundBtn.classList.add('bg-primary', 'text-black');
             soundBtn.classList.remove('bg-black/90', 'text-primary');
@@ -472,7 +425,7 @@ tailwind.config = {
         video.volume = 1.0;
         video.muted = false;
 
-        // Solo intentar reproducir automáticamente si estamos en PC (Ahorro brutal de datos móviles)
+        // Solo intentar reproducir automáticamente si estamos en PC (Ahorra muchísimos datos móviles)
         if (!isMobile) {
             const initialPlay = video.play();
             if (initialPlay !== undefined) {
@@ -491,7 +444,7 @@ tailwind.config = {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
               video.volume = 1.0;
-              // No forzar AutoPlay en móvil si el usuario está escroleando
+              // No forzar AutoPlay si es celular, dejar que el preload="none" haga su trabajo
               if (!isMobile) {
                   const p = video.play();
                   if (p !== undefined) {
@@ -512,6 +465,7 @@ tailwind.config = {
       }
     })();
   </script>
+</div>
 </main>
 <footer class="relative z-10 w-full bg-black border-t-2 border-zinc-800 mt-space-xl">
 <div class="max-w-7xl mx-auto px-margin py-8 flex flex-col md:flex-row items-center justify-between gap-6">
