@@ -1,133 +1,94 @@
-<!DOCTYPE html><html class="dark" lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>Jhojan &amp; Alejandro — Farmear Aura</title><meta name="description" content="Invitación oficial para farmear aura con Jhojan y Alejandro. Sábado 26 de septiembre, 11:30 AM, Casa de Eventos Quiroga-López."><meta name="theme-color" content="#0e0e12"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://res.cloudinary.com" rel="preconnect"><link href="https://lh3.googleusercontent.com" rel="preconnect"><link href="https://res.cloudinary.com" rel="dns-prefetch"><link href="https://lh3.googleusercontent.com" rel="dns-prefetch"><link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=JetBrains+Mono:wght@400;700&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;family=Permanent+Marker&amp;family=Space+Grotesk:wght@400;600;700;800&amp;display=swap" rel="stylesheet"><style>
-@layer base{
-  *,*::before,*::after{box-sizing:border-box}
-  html,body{margin:0;padding:0;max-width:100%;overflow-x:hidden}
-  html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth}
-  body{overscroll-behavior:none;background-color:#0e0e12;min-width:320px}
-  main>:first-child{margin-top:0!important}
-  main>:last-child{margin-bottom:0!important}
-  img,video,svg{max-width:100%}
-  button,input,select{max-width:100%}
-}
-::-webkit-scrollbar{display:none}
-.font-spray{font-family:'Permanent Marker',cursive}
-.stroke-black-sm{-webkit-text-stroke:2px #000}
-.stroke-black-lg{-webkit-text-stroke:4px #000}
-.grunge-border{box-shadow:0 0 0 3px #131317,0 0 0 5px #d9ef00}
-
-/* Escalado fluido y prevención de desbordes */
+<!DOCTYPE html><html class="dark" lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://res.cloudinary.com" rel="preconnect"><link href="https://lh3.googleusercontent.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Space+Grotesk:wght@400;600;700;800&amp;family=Permanent+Marker&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;background-color:#0e0e12;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.font-spray{font-family:'Permanent+Marker',cursive;}.stroke-black-sm{-webkit-text-stroke:2px #000;}.stroke-black-lg{-webkit-text-stroke:4px #000;}.grunge-border{box-shadow:0 0 0 3px #131317,0 0 0 5px #d9ef00;}
+/* ===== AJUSTES RESPONSIVE / RENDIMIENTO (sin eliminar contenido) ===== */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+img,video{max-width:100%}
 main,section,footer,div{min-width:0}
-.responsive-display-title{
-  font-size:clamp(2.35rem,8.5vw,4.75rem)!important;
-  line-height:1.04!important;
-  overflow-wrap:normal;
-  word-break:normal;
-}
-.responsive-section-title{
-  font-size:clamp(2rem,6.6vw,2.875rem)!important;
-  line-height:1.08!important;
-}
-.responsive-wrap{max-width:100%;white-space:normal}
-.performance-section{content-visibility:auto;contain-intrinsic-size:auto 800px}
 
-/* Video: mismo contenido completo en móvil y PC, sin zoom ni recorte */
+/* Evita desbordes por textos largos, badges y botones */
+h1,h2,h3,p,span,a,button,label{overflow-wrap:anywhere}
+
+/* El video siempre conserva la imagen completa: nada de zoom/crop */
 #hero-video-wrapper{
   width:min(100%,420px);
   aspect-ratio:9/16;
   margin-inline:auto;
-  contain:layout paint;
 }
 #hero-street-video{
-  display:block;
   width:100%;
   height:100%;
-  object-fit:contain;
-  object-position:center center;
+  object-fit:contain !important;
+  object-position:center center !important;
+  transform:none !important;
   background:#000;
-  transform:none!important;
 }
-.video-zone-badge,.video-top-badge,.video-sound-btn,.video-bottom-badges{max-width:calc(100% - 1rem)}
-.video-bottom-badges>div{min-width:0}
-.video-bottom-badges span{overflow-wrap:anywhere}
+#hero-street-video:hover{transform:none !important}
 
-/* Imágenes de contenido estables, sin salto de layout */
-.responsive-poster{
+/* Poster / imágenes */
+#registro-invitacion img{
   width:100%;
   height:auto;
   object-fit:contain;
-  content-visibility:auto;
 }
 
-/* Formularios y footer */
-input,select,button{font:inherit}
-.footer-actions{flex-wrap:wrap;justify-content:center}
-.footer-actions a{min-width:0}
+/* Footer y controles flexibles */
+footer .flex{min-width:0}
+footer a{white-space:normal;text-align:center}
 
-/* Evita animaciones costosas si el usuario lo prefiere */
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
-}
-
-/* Mobile-first: 320px–640px */
+/* Reduce trabajo gráfico pesado en móviles sin cambiar el look general */
 @media (max-width:640px){
-  main{padding-top:1.25rem!important;padding-left:.875rem!important;padding-right:.875rem!important}
-  section{padding-top:1.35rem!important;padding-bottom:1.35rem!important}
-  .responsive-display-title{font-size:clamp(2.1rem,11.5vw,3.2rem)!important;line-height:.98!important}
-  .responsive-section-title{font-size:clamp(1.9rem,9vw,2.5rem)!important}
-  #hero-video-wrapper{
-    width:min(100%,390px);
-    border-width:2px!important;
-    border-radius:1rem!important;
-  }
-  .video-zone-badge{
-    top:.5rem!important;left:.5rem!important;
-    padding:.35rem .5rem!important;
-    font-size:.58rem!important;
-    line-height:.8rem!important;
-  }
-  .video-zone-badge .material-symbols-outlined{font-size:14px!important}
-  .video-top-badge{display:none!important}
-  .video-sound-btn{
-    top:.5rem!important;right:.5rem!important;
-    padding:.4rem .55rem!important;
-    font-size:.58rem!important;
-    line-height:.8rem!important;
-  }
-  .video-sound-btn #sound-icon{font-size:15px!important}
-  .video-bottom-badges{
-    left:.5rem!important;right:.5rem!important;bottom:.5rem!important;
-    gap:.35rem!important;
-    max-width:none!important;
-  }
-  .video-bottom-badges>div{
-    flex:1 1 46%;
-    padding:.45rem .55rem!important;
-    gap:.3rem!important;
-  }
-  .video-bottom-badges .text-xl{font-size:1rem!important}
-  .video-bottom-badges .text-body-md{font-size:.72rem!important;line-height:.9rem!important}
-  .video-bottom-badges .text-\[10px\]{font-size:.52rem!important;line-height:.7rem!important}
-  .mobile-stack{flex-direction:column!important;align-items:stretch!important}
-  .mobile-stack>*{width:100%}
-  .mobile-center-wrap{justify-content:center!important;text-align:center!important}
-  .countdown-grid{gap:.35rem!important}
-  .countdown-grid>div{padding:.45rem .2rem!important}
-  .countdown-grid .text-2xl{font-size:1.25rem!important}
-  .confirm-button{padding:.85rem .75rem!important;font-size:.78rem!important;line-height:1.05rem!important}
-  footer .max-w-7xl{padding-left:.875rem!important;padding-right:.875rem!important}
-  .footer-actions{gap:.5rem!important}
-  .footer-actions a{flex:1 1 46%;justify-content:center;text-align:center;padding:.6rem .5rem!important}
+  body{overflow-x:hidden}
+  main{padding-left:12px !important;padding-right:12px !important;padding-top:28px !important}
+  section{padding-left:0 !important;padding-right:0 !important}
+
+  h1{font-size:clamp(2.15rem,11vw,3.15rem)!important;line-height:.98!important;letter-spacing:.01em!important}
+  h2{font-size:clamp(1.9rem,9vw,2.6rem)!important;line-height:1.02!important}
+
+  /* Badges superiores: se apilan y no salen de pantalla */
+  section:first-of-type .inline-flex{max-width:100%;white-space:normal;flex-wrap:wrap;justify-content:center;text-align:center}
+  section:first-of-type .inline-flex span{max-width:100%}
+
+  #hero-video-wrapper{width:min(100%,390px);border-width:2px!important;border-radius:16px!important}
+  #hero-video-wrapper>div.absolute.top-4.left-4{top:10px!important;left:10px!important;max-width:58%;font-size:9px!important;padding:6px 8px!important}
+  #hero-video-wrapper>div.absolute.top-4.right-4{top:10px!important;right:10px!important;max-width:38%;font-size:9px!important;padding:6px 8px!important;text-align:center}
+  #toggle-sound-btn{top:52px!important;right:10px!important;font-size:10px!important;padding:7px 9px!important;max-width:46%}
+  #sound-btn-text{white-space:normal}
+
+  #hero-video-wrapper .absolute.bottom-6.left-6{left:10px!important;right:10px!important;bottom:10px!important;gap:6px!important}
+  #hero-video-wrapper .absolute.bottom-6.left-6>div{padding:7px 9px!important;flex:1 1 46%;min-width:0}
+  #hero-video-wrapper .absolute.bottom-6.left-6 span{font-size:10px!important}
+
+  /* Tarjetas e invitación */
+  #registro-invitacion .p-5{padding:14px!important}
+  #registro-invitacion .p-4{padding:12px!important}
+  #registro-invitacion .flex.items-center.justify-between{gap:8px;flex-wrap:wrap}
+  #registro-invitacion .grid.grid-cols-4{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  #registro-invitacion button[type="submit"]{padding:13px 12px!important;font-size:13px!important;line-height:1.2!important;white-space:normal}
+
+  footer .max-w-7xl{padding-left:12px!important;padding-right:12px!important}
+  footer .flex.items-center.gap-3{width:100%;flex-wrap:wrap;justify-content:center}
+  footer .flex.items-center.gap-3 a{flex:1 1 46%;justify-content:center;min-width:130px}
+
+  /* Menos blur = mejor fluidez en teléfonos */
+  body>div.pointer-events-none .blur-\[160px\],
+  body>div.pointer-events-none .blur-\[180px\]{filter:blur(90px)!important}
 }
 
-/* Tablets */
 @media (min-width:641px) and (max-width:1023px){
+  main{padding-left:20px!important;padding-right:20px!important}
   #hero-video-wrapper{width:min(58vw,420px)}
 }
 
-/* Desktop: limita la altura visual del video en pantallas bajas */
+@media (min-width:1024px){
+  #hero-video-wrapper{width:min(100%,420px)}
+}
+
 @media (min-width:1024px) and (max-height:820px){
   #hero-video-wrapper{width:min(100%,350px)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
 </style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
     darkMode: "class",
@@ -248,9 +209,9 @@ input,select,button{font:inherit}
 </div>
 <div class="relative z-10 flex flex-col items-center text-center max-w-5xl mx-auto px-margin-mobile md:px-margin">
 <!-- Badge Estilo Cinta de Precaución / Corona Graffiti -->
-<div class="responsive-wrap inline-flex flex-wrap justify-center items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 md:py-3.5 rounded-2xl sm:rounded-full bg-black/90 border-2 border-primary shadow-[0_0_30px_rgba(217,239,0,0.6)] mb-space-md hover:scale-[1.03] transition-all"><span class="text-primary text-2xl leading-none animate-bounce">👑</span><span class="font-mono text-sm md:text-base text-primary font-bold tracking-widest uppercase">// LEE CUIDADOSAMENTE, SI NO LO HACES -1.000 DE AURA BOOMER</span><span class="text-secondary text-2xl leading-none">⚠️</span></div><div class="responsive-wrap mb-space-md inline-flex flex-wrap justify-center items-center gap-2 px-3 sm:px-4 py-2 rounded-xl bg-black border-2 border-secondary shadow-[4px_4px_0_#ff4a8d] rotate-[-1deg]"><span class="text-primary text-xl">👑</span><span class="font-headline-md text-sm md:text-base text-white tracking-wider uppercase">HOSTS: <span class="text-primary font-bold">JHOJAN &amp; ALEJANDRO</span> <span class="text-secondary">//</span> LOS FARMEADORES MÁS LÁMPARAS</span><span class="text-secondary text-xl">⚡</span></div>
+<div class="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-3.5 rounded-full bg-black/90 border-2 border-primary shadow-[0_0_30px_rgba(217,239,0,0.6)] mb-space-md hover:scale-[1.03] transition-all"><span class="text-primary text-2xl leading-none animate-bounce">👑</span><span class="font-mono text-sm md:text-base text-primary font-bold tracking-widest uppercase">// LEE CUIDADOSAMENTE, SI NO LO HACES -1.000 DE AURA BOOMER</span><span class="text-secondary text-2xl leading-none">⚠️</span></div><div class="mb-space-md inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-black border-2 border-secondary shadow-[4px_4px_0_#ff4a8d] rotate-[-1deg]"><span class="text-primary text-xl">👑</span><span class="font-headline-md text-sm md:text-base text-white tracking-wider uppercase">HOSTS: <span class="text-primary font-bold">JHOJAN &amp; ALEJANDRO</span> <span class="text-secondary">//</span> LOS FARMEADORES MÁS LÁMPARAS</span><span class="text-secondary text-xl">⚡</span></div>
 <!-- Título Monumental Graffiti Spray -->
-<h1 class="responsive-display-title font-headline-lg md:font-display-xl text-headline-lg-mobile md:text-display-xl uppercase tracking-wider text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+<h1 class="font-headline-lg md:font-display-xl text-headline-lg-mobile md:text-display-xl uppercase tracking-wider text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
         ¿ESTÁS PREPARADO PARA <br>
 <span class="inline-block relative mt-1">
 <span class="relative z-10 px-4 py-1 bg-black text-primary border-4 border-primary rotate-[-2deg] inline-block shadow-[8px_8px_0_#ff4a8d] tracking-wide">
@@ -265,10 +226,10 @@ input,select,button{font:inherit}
 </div>
 </div>
 <!-- Visual Cinematic Showcase (Arena Callejera / Guerrero) -->
-<div class="relative z-10 mt-space-xl w-full mx-auto px-0 sm:px-margin-mobile md:px-0 flex justify-center"><div class="relative rounded-2xl overflow-hidden bg-black border-4 border-surface-container-high shadow-[0_0_50px_rgba(217,239,0,0.2)] w-full max-w-[420px] aspect-[9/16]" id="hero-video-wrapper"><div class="video-zone-badge absolute top-4 left-4 z-20 flex items-center gap-2 bg-black/90 border border-primary/50 text-primary font-mono text-label-md px-3 py-1.5 rounded shadow-md"><span class="material-symbols-outlined text-[16px]">sports_martial_arts</span><span class="">ZONA: CYBER_STREET_ARENA_01</span></div><div class="video-top-badge absolute top-4 right-4 z-20 flex items-center gap-1.5 bg-secondary text-black font-headline-md text-xs px-3 py-1.5 rounded rotate-1 shadow-md uppercase"><span class="">⚡ BUENA GENTE MEJOR PLAN</span></div><button aria-label="Activar o desactivar el audio del video" class="video-sound-btn absolute top-16 right-4 z-30 flex items-center gap-2 px-3.5 py-2 rounded-xl border-2 border-primary font-mono text-xs font-bold tracking-wider uppercase shadow-[0_0_20px_rgba(217,239,0,0.6)] hover:bg-primary hover:text-black transition-all cursor-pointer bg-primary text-black" id="toggle-sound-btn"><span class="material-symbols-outlined text-[18px]" id="sound-icon">volume_up</span><span class="" id="sound-btn-text">AUDIO ON (100%)</span></button><div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40 z-10 pointer-events-none"></div><div class="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60 z-10 pointer-events-none"></div><video class="w-full h-full object-contain object-center rounded-xl" controls id="hero-street-video" loop muted playsinline preload="none" poster="https://res.cloudinary.com/urzwziyj/video/upload/so_0,q_auto:eco,f_auto/v1790169290/JHOJAN_Y_ALEJANDRO_1.jpg"><source src="https://res.cloudinary.com/urzwziyj/video/upload/v1790169290/JHOJAN_Y_ALEJANDRO_1.mp4" type="video/mp4">Tu navegador no soporta el formato de video.</video><div class="video-bottom-badges absolute bottom-6 left-6 z-20 flex flex-wrap items-center gap-space-sm pointer-events-none"><div class="flex items-center gap-space-xs px-4 py-2.5 rounded-xl bg-black/90 border-2 border-primary backdrop-blur-md shadow-lg pointer-events-auto"><span class="text-primary text-xl">👑</span><div class="flex flex-col text-left"><span class="font-mono text-[10px] uppercase text-zinc-400 font-bold tracking-wider">AURA DE COMBATE</span><span class="font-headline-md text-body-md text-primary font-bold">RANGO SSS+ REAL</span></div></div><div class="flex items-center gap-space-xs px-4 py-2.5 rounded-xl bg-black/90 border-2 border-secondary backdrop-blur-md shadow-lg pointer-events-auto"><span class="material-symbols-outlined text-secondary text-[22px]">local_fire_department</span><div class="flex flex-col text-left"><span class="font-mono text-[10px] uppercase text-zinc-400 font-bold tracking-wider">PINTA MÁS LÁMPARA</span><span class="font-mono text-label-md text-secondary font-bold">+100K EXP</span></div></div></div><div class="absolute bottom-6 right-6 z-20 hidden md:flex items-center gap-space-sm px-4 py-2.5 rounded-xl bg-black/95 border border-zinc-700 pointer-events-none"><span class="font-mono text-label-sm text-zinc-300">FLOW LEVEL: 100%</span><div class="flex items-end gap-1.5 h-4"><span class="w-1.5 bg-primary rounded-full animate-bounce h-2"></span><span class="w-1.5 bg-secondary rounded-full animate-bounce h-4"></span><span class="w-1.5 bg-white rounded-full animate-bounce h-3"></span></div></div></div></div>
+<div class="relative z-10 mt-space-xl max-w-md mx-auto px-margin-mobile md:px-0 flex justify-center"><div class="relative rounded-2xl overflow-hidden bg-black border-4 border-surface-container-high shadow-[0_0_50px_rgba(217,239,0,0.2)] w-full max-w-[420px] aspect-[9/16]" id="hero-video-wrapper"><div class="absolute top-4 left-4 z-20 flex items-center gap-2 bg-black/90 border border-primary/50 text-primary font-mono text-label-md px-3 py-1.5 rounded shadow-md"><span class="material-symbols-outlined text-[16px]">sports_martial_arts</span><span class="">ZONA: CYBER_STREET_ARENA_01</span></div><div class="absolute top-4 right-4 z-20 flex items-center gap-1.5 bg-secondary text-black font-headline-md text-xs px-3 py-1.5 rounded rotate-1 shadow-md uppercase"><span class="">⚡ BUENA GENTE MEJOR PLAN</span></div><button class="absolute top-16 right-4 z-30 flex items-center gap-2 px-3.5 py-2 rounded-xl border-2 border-primary font-mono text-xs font-bold tracking-wider uppercase shadow-[0_0_20px_rgba(217,239,0,0.6)] hover:bg-primary hover:text-black transition-all cursor-pointer bg-primary text-black" id="toggle-sound-btn"><span class="material-symbols-outlined text-[18px]" id="sound-icon">volume_up</span><span class="" id="sound-btn-text">AUDIO ON (100%)</span></button><div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40 z-10 pointer-events-none"></div><div class="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60 z-10 pointer-events-none"></div><video class="w-full h-full object-contain object-center rounded-xl" controls="" id="hero-street-video" loop="" playsinline="" preload="none" src="https://res.cloudinary.com/urzwziyj/video/upload/v1790169290/JHOJAN_Y_ALEJANDRO_1.mp4"><source src="https://res.cloudinary.com/urzwziyj/video/upload/v1790169290/JHOJAN_Y_ALEJANDRO_1.mp4" type="video/mp4">Tu navegador no soporta el formato de video.</video><div class="absolute bottom-6 left-6 z-20 flex flex-wrap items-center gap-space-sm pointer-events-none"><div class="flex items-center gap-space-xs px-4 py-2.5 rounded-xl bg-black/90 border-2 border-primary backdrop-blur-md shadow-lg pointer-events-auto"><span class="text-primary text-xl">👑</span><div class="flex flex-col text-left"><span class="font-mono text-[10px] uppercase text-zinc-400 font-bold tracking-wider">AURA DE COMBATE</span><span class="font-headline-md text-body-md text-primary font-bold">RANGO SSS+ REAL</span></div></div><div class="flex items-center gap-space-xs px-4 py-2.5 rounded-xl bg-black/90 border-2 border-secondary backdrop-blur-md shadow-lg pointer-events-auto"><span class="material-symbols-outlined text-secondary text-[22px]">local_fire_department</span><div class="flex flex-col text-left"><span class="font-mono text-[10px] uppercase text-zinc-400 font-bold tracking-wider">PINTA MÁS LÁMPARA</span><span class="font-mono text-label-md text-secondary font-bold">+100K EXP</span></div></div></div><div class="absolute bottom-6 right-6 z-20 hidden md:flex items-center gap-space-sm px-4 py-2.5 rounded-xl bg-black/95 border border-zinc-700 pointer-events-none"><span class="font-mono text-label-sm text-zinc-300">FLOW LEVEL: 100%</span><div class="flex items-end gap-1.5 h-4"><span class="w-1.5 bg-primary rounded-full animate-bounce h-2"></span><span class="w-1.5 bg-secondary rounded-full animate-bounce h-4"></span><span class="w-1.5 bg-white rounded-full animate-bounce h-3"></span></div></div></div></div>
 </section>
 <!-- SECCIÓN 2: TRANSICIÓN E INDICADOR DE PROGRESIÓN -->
-<section class="performance-section relative w-full py-space-xl my-space-md" id="progreso-aura">
+<section class="relative w-full py-space-xl my-space-md" id="progreso-aura">
 <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-space-lg">
 <a class="group flex flex-col items-center gap-space-xs cursor-pointer" href="#hero-video-wrapper">
 <div class="flex items-center gap-2 mb-1">
@@ -288,7 +249,7 @@ input,select,button{font:inherit}
 </div>
 </section>
 <!-- SECCIÓN 3: ESPACIO PARA VIDEO / TRAILER CALLEJERO -->
-<section class="performance-section relative w-full py-space-xl" id="transmision-video">
+<section class="relative w-full py-space-xl" id="transmision-video">
 <div class="max-w-5xl mx-auto">
 <div class="text-center mb-space-lg">
 </div>
@@ -298,149 +259,122 @@ input,select,button{font:inherit}
 </div>
 </section>
 <!-- SECCIÓN 4: INVITACIÓN OFICIAL CALLEJERA & REGISTRO -->
-<section class="performance-section relative w-full py-space-xl my-space-md" id="registro-invitacion">
+<section class="relative w-full py-space-xl my-space-md" id="registro-invitacion">
 <div class="max-w-6xl mx-auto">
 <div class="text-center mb-space-lg">
 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black border-2 border-primary text-primary font-mono text-label-sm mb-space-sm shadow-[0_0_15px_rgba(217,239,0,0.3)]">
 <span class="text-lg">👑</span>// PASE OFICIAL CONFIRMADO
 </div>
-<h2 class="responsive-section-title font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white uppercase tracking-wider">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white uppercase tracking-wider">
           TU INVITACIÓN OFICIAL AL PARCHE DE AURA
-        </h2><div class="responsive-wrap mt-3 mb-2 inline-flex flex-wrap justify-center items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl bg-black border-2 border-primary shadow-[4px_4px_0_#d9ef00] rotate-1"><span class="text-secondary text-lg">👑</span><span class="font-headline-md text-sm md:text-base text-primary uppercase tracking-wide">INVITACIÓN DE PARTE DE <span class="text-white">JHOJAN Y ALEJANDRO</span> — <span class="text-secondary">LOS FARMEADORES MÁS LÁMPARAS</span></span><span class="text-primary text-lg">⚡</span></div>
+        </h2><div class="mt-3 mb-2 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-black border-2 border-primary shadow-[4px_4px_0_#d9ef00] rotate-1"><span class="text-secondary text-lg">👑</span><span class="font-headline-md text-sm md:text-base text-primary uppercase tracking-wide">INVITACIÓN DE PARTE DE <span class="text-white">JHOJAN Y ALEJANDRO</span> — <span class="text-secondary">LOS FARMEADORES MÁS LÁMPARAS</span></span><span class="text-primary text-lg">⚡</span></div>
 <p class="font-body-md text-body-md text-zinc-400 mt-space-xs max-w-2xl mx-auto">
           Acompáñanos a farmear aura para celebrar nuestros ticinco. ¡Trae tu pinta más lámpara para farmear aura con nosotros!
         </p>
 </div>
 <!-- Grid Asimétrico: Póster Real (IMAGE_3) + Datos Clave + Formulario -->
-<div class="flex flex-col items-center gap-space-xl max-w-5xl mx-auto w-full"><div class="flex flex-col items-center w-full max-w-3xl mx-auto"><div class="relative w-fit max-w-full mx-auto rounded-2xl p-2.5 md:p-3 bg-gradient-to-b from-primary via-zinc-800 to-secondary shadow-[0_0_50px_rgba(217,239,0,0.35)] hover:shadow-[0_0_60px_rgba(255,74,141,0.5)] transition-all duration-300"><div class="relative rounded-xl overflow-hidden bg-black flex justify-center"><img alt="Póster oficial de invitación: Estás Invitado. Sábado 26 de Septiembre 11:30 AM en Casa de Eventos Quiroga-López. Llegué, llegué, yogo yogo!" class="responsive-poster block w-full max-w-2xl h-auto rounded-xl object-contain shadow-2xl transition-all duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyYbnrv01IZjlJB243dhaqHCmnm_Kl39BEmdYkqG_3sOgDNkY7Lzjr2d_txcqk_dOkr1k7fICQvtaGiOsIrMNAI-h-hDalI27JmDFnxKmRIWDgRh_saGO5KWfplicfM6p-5WyvqLOH_7Ck3MYpycY8F4trhT1RAQClj4pl-l6i1y6R55zRpVgo3fBs95U7UsTEx_cgsDbILfMqwMHbGGNK6YKUi7aYFnUZP2KyGovgxKrvPWKo3WnGnU1tqb3Mtd8Xzw" width="1080" height="1920" loading="lazy" decoding="async" fetchpriority="low"></div></div><div class="mt-4 px-6 py-2 bg-black/90 border border-primary/40 rounded-xl text-center shadow-md w-fit mx-auto"><p class="font-mono text-xs md:text-sm text-primary font-bold tracking-wider">MÁS AMIGOS + MÁS AURA + MEJORES HISTORIAS</p></div></div><div class="w-full max-w-2xl flex flex-col gap-5 mx-auto"><div class="p-5 rounded-2xl bg-surface-container/90 border-2 border-primary/60 shadow-xl relative overflow-hidden"><div class="absolute -right-6 -bottom-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div><div class="flex items-center justify-between mb-4 pb-3 border-b border-zinc-800"><span class="font-headline-md text-sm text-primary uppercase tracking-wider flex items-center gap-1.5"><span class="text-secondary text-base">📍</span> COORDENADAS DEL FARMEO</span><span class="px-2 py-0.5 rounded bg-secondary text-black font-headline-md text-xs uppercase font-bold">TICINCO B-DAY</span></div><div class="mobile-stack mb-4 p-2.5 rounded-lg bg-black/90 border border-primary/50 flex items-center justify-between gap-2"><div class="flex items-center gap-2"><span class="text-primary text-base">👑</span><span class="font-mono text-xs uppercase text-zinc-300 font-bold tracking-wider">ANFITRIONES DEL PARCHE:</span></div><span class="font-headline-md text-sm text-primary font-bold tracking-wide">JHOJAN &amp; ALEJANDRO</span></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div class="bg-black/80 p-3.5 rounded-xl border border-zinc-800"><div class="font-mono text-[11px] text-zinc-400 uppercase">📅 FECHA &amp; HORA</div><div class="font-headline-md text-base text-white mt-1">Sábado 26 de Septiembre</div><div class="font-mono text-sm text-primary font-bold mt-0.5">11:30 AM&nbsp;</div></div><div class="bg-black/80 p-3.5 rounded-xl border border-zinc-800"><div class="font-mono text-[11px] text-zinc-400 uppercase">🏠 LUGAR EXACTO</div><div class="font-headline-md text-base text-white mt-1">Casa de Eventos</div><div class="font-mono text-sm text-secondary font-bold mt-0.5">Quiroga-López</div></div></div><div class="mobile-stack mt-4 p-3 rounded-xl bg-black border-2 border-secondary flex items-center justify-between gap-3 shadow-[4px_4px_0_#ff4a8d]"><div class="flex items-center gap-2"><span class="text-2xl">🔥</span><div><div class="font-headline-md text-sm text-white tracking-wide">¡LLEGUÉ, LLEGUÉ, YOGO YOGO!</div><div class="font-body-sm text-[12px] text-zinc-300">Trae tu pinta más lámpara para farmear aura con nosotros.</div></div></div><span class="text-primary text-xl font-bold">👑</span></div></div><div class="p-4 rounded-xl bg-black border-2 border-zinc-800 shadow-md"><div class="flex items-center justify-between mb-2"><span class="font-mono text-label-sm text-primary uppercase font-bold tracking-wider">// CUENTA REGRESIVA PARA LA BATALLA</span><span class="material-symbols-outlined text-primary text-[18px]">timer</span></div><div class="countdown-grid grid grid-cols-4 gap-2 text-center"><div class="bg-surface-container p-2 rounded-lg border border-zinc-800"><div class="font-headline-md text-2xl text-white font-bold" id="count-days">02</div><div class="font-mono text-[9px] uppercase text-zinc-400">DÍAS</div></div><div class="bg-surface-container p-2 rounded-lg border border-zinc-800"><div class="font-headline-md text-2xl text-white font-bold" id="count-hours">14</div><div class="font-mono text-[9px] uppercase text-zinc-400">HORAS</div></div><div class="bg-surface-container p-2 rounded-lg border border-zinc-800"><div class="font-headline-md text-2xl text-white font-bold" id="count-mins">38</div><div class="font-mono text-[9px] uppercase text-zinc-400">MINS</div></div><div class="bg-surface-container p-2 rounded-lg border border-zinc-800"><div class="font-headline-md text-2xl text-primary font-bold" id="count-secs">45</div><div class="font-mono text-[9px] uppercase text-zinc-400">SEGS</div></div></div></div><form class="flex flex-col gap-3.5 bg-surface-container/90 border-2 border-zinc-800 p-5 rounded-2xl shadow-xl" onsubmit="event.preventDefault(); alert('¡Pase confirmado! Prepárate para el 26 de Septiembre en Quiroga-López. ¡A farmear aura!');"><div class="flex flex-col gap-1"><label class="font-mono text-label-sm uppercase tracking-wider text-zinc-300 flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">badge</span>Tu Nombre o Apodo</label><input class="w-full bg-black border border-zinc-700 px-4 py-2.5 rounded-lg font-body-md text-white placeholder:text-zinc-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Ej. El Duro del Flow / Santi" required="" type="text"></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-3"><div class="flex flex-col gap-1"><label class="font-mono text-label-sm uppercase tracking-wider text-zinc-300 flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-secondary">checkroom</span>Nivel de tu Pinta</label><select class="w-full bg-black border border-zinc-700 px-3 py-2.5 rounded-lg font-body-sm text-white focus:outline-none focus:border-secondary transition-all"><option selected="" value="lampara">Pinta Muy Lámpara (Flow 100)</option><option value="oversized">Streetwear Oversized</option><option value="legendario">Aura S-Tier Inalcanzable</option></select></div><div class="flex flex-col gap-1"><label class="font-mono text-label-sm uppercase tracking-wider text-zinc-300 flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">group_add</span>¿Vienes con Parche?</label><select class="w-full bg-black border border-zinc-700 px-3 py-2.5 rounded-lg font-body-sm text-white focus:outline-none focus:border-primary transition-all"><option value="solo">Vengo solo a farmear aura</option><option selected="" value="combo">+1 Acompañante fiel</option><option value="corillo">Con todo el corillo completo</option></select></div></div><button class="confirm-button mt-2 w-full inline-flex flex-wrap items-center justify-center gap-2 px-4 sm:px-6 py-4 rounded-xl bg-primary text-black font-headline-md text-base font-bold tracking-widest uppercase shadow-[4px_4px_0_#ff4a8d] hover:bg-[#ebff1a] hover:shadow-[0_0_30px_rgba(217,239,0,0.8)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border-2 border-black" type="submit"><span class="material-symbols-outlined text-[22px]">confirmation_number</span>CONFIRMAR ASISTENCIA // RECLAMAR ACCESO</button><p class="font-mono text-[10px] text-center text-zinc-400">* Acceso libre de parte de Jhojan y Alejandro para amigos con aura comprobada. Casa de Eventos Quiroga-López.</p></form></div></div>
+<div class="flex flex-col items-center gap-space-xl max-w-5xl mx-auto w-full"><div class="flex flex-col items-center w-full max-w-3xl mx-auto"><div class="relative w-fit max-w-full mx-auto rounded-2xl p-2.5 md:p-3 bg-gradient-to-b from-primary via-zinc-800 to-secondary shadow-[0_0_50px_rgba(217,239,0,0.35)] hover:shadow-[0_0_60px_rgba(255,74,141,0.5)] transition-all duration-300"><div class="relative rounded-xl overflow-hidden bg-black flex justify-center"><img loading="lazy" decoding="async" fetchpriority="low" alt="Póster oficial de invitación: Estás Invitado. Sábado 26 de Septiembre 11:30 AM en Casa de Eventos Quiroga-López. Llegué, llegué, yogo yogo!" class="block w-full max-w-2xl h-auto rounded-xl object-contain shadow-2xl transition-all duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyYbnrv01IZjlJB243dhaqHCmnm_Kl39BEmdYkqG_3sOgDNkY7Lzjr2d_txcqk_dOkr1k7fICQvtaGiOsIrMNAI-h-hDalI27JmDFnxKmRIWDgRh_saGO5KWfplicfM6p-5WyvqLOH_7Ck3MYpycY8F4trhT1RAQClj4pl-l6i1y6R55zRpVgo3fBs95U7UsTEx_cgsDbILfMqwMHbGGNK6YKUi7aYFnUZP2KyGovgxKrvPWKo3WnGnU1tqb3Mtd8Xzw"></div></div><div class="mt-4 px-6 py-2 bg-black/90 border border-primary/40 rounded-xl text-center shadow-md w-fit mx-auto"><p class="font-mono text-xs md:text-sm text-primary font-bold tracking-wider">MÁS AMIGOS + MÁS AURA + MEJORES HISTORIAS</p></div></div><div class="w-full max-w-2xl flex flex-col gap-5 mx-auto"><div class="p-5 rounded-2xl bg-surface-container/90 border-2 border-primary/60 shadow-xl relative overflow-hidden"><div class="absolute -right-6 -bottom-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div><div class="flex items-center justify-between mb-4 pb-3 border-b border-zinc-800"><span class="font-headline-md text-sm text-primary uppercase tracking-wider flex items-center gap-1.5"><span class="text-secondary text-base">📍</span> COORDENADAS DEL FARMEO</span><span class="px-2 py-0.5 rounded bg-secondary text-black font-headline-md text-xs uppercase font-bold">TICINCO B-DAY</span></div><div class="mb-4 p-2.5 rounded-lg bg-black/90 border border-primary/50 flex items-center justify-between"><div class="flex items-center gap-2"><span class="text-primary text-base">👑</span><span class="font-mono text-xs uppercase text-zinc-300 font-bold tracking-wider">ANFITRIONES DEL PARCHE:</span></div><span class="font-headline-md text-sm text-primary font-bold tracking-wide">JHOJAN &amp; ALEJANDRO</span></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div class="bg-black/80 p-3.5 rounded-xl border border-zinc-800"><div class="font-mono text-[11px] text-zinc-400 uppercase">📅 FECHA &amp; HORA</div><div class="font-headline-md text-base text-white mt-1">Sábado 26 de Septiembre</div><div class="font-mono text-sm text-primary font-bold mt-0.5">11:30 AM&nbsp;</div></div><div class="bg-black/80 p-3.5 rounded-xl border border-zinc-800"><div class="font-mono text-[11px] text-zinc-400 uppercase">🏠 LUGAR EXACTO</div><div class="font-headline-md text-base text-white mt-1">Casa de Eventos</div><div class="font-mono text-sm text-secondary font-bold mt-0.5">Quiroga-López</div></div></div><div class="mt-4 p-3 rounded-xl bg-black border-2 border-secondary flex items-center justify-between gap-3 shadow-[4px_4px_0_#ff4a8d]"><div class="flex items-center gap-2"><span class="text-2xl">🔥</span><div><div class="font-headline-md text-sm text-white tracking-wide">¡LLEGUÉ, LLEGUÉ, YOGO YOGO!</div><div class="font-body-sm text-[12px] text-zinc-300">Trae tu pinta más lámpara para farmear aura con nosotros.</div></div></div><span class="text-primary text-xl font-bold">👑</span></div></div><div class="p-4 rounded-xl bg-black border-2 border-zinc-800 shadow-md"><div class="flex items-center justify-between mb-2"><span class="font-mono text-label-sm text-primary uppercase font-bold tracking-wider">// CUENTA REGRESIVA PARA LA BATALLA</span><span class="material-symbols-outlined text-primary text-[18px]">timer</span></div><div class="grid grid-cols-4 gap-2 text-center"><div class="bg-surface-container p-2 rounded-lg border border-zinc-800"><div class="font-headline-md text-2xl text-white font-bold" id="count-days">02</div><div class="font-mono text-[9px] uppercase text-zinc-400">DÍAS</div></div><div class="bg-surface-container p-2 rounded-lg border border-zinc-800"><div class="font-headline-md text-2xl text-white font-bold" id="count-hours">14</div><div class="font-mono text-[9px] uppercase text-zinc-400">HORAS</div></div><div class="bg-surface-container p-2 rounded-lg border border-zinc-800"><div class="font-headline-md text-2xl text-white font-bold" id="count-mins">38</div><div class="font-mono text-[9px] uppercase text-zinc-400">MINS</div></div><div class="bg-surface-container p-2 rounded-lg border border-zinc-800"><div class="font-headline-md text-2xl text-primary font-bold" id="count-secs">45</div><div class="font-mono text-[9px] uppercase text-zinc-400">SEGS</div></div></div></div><form class="flex flex-col gap-3.5 bg-surface-container/90 border-2 border-zinc-800 p-5 rounded-2xl shadow-xl" onsubmit="event.preventDefault(); alert('¡Pase confirmado! Prepárate para el 26 de Septiembre en Quiroga-López. ¡A farmear aura!');"><div class="flex flex-col gap-1"><label class="font-mono text-label-sm uppercase tracking-wider text-zinc-300 flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">badge</span>Tu Nombre o Apodo</label><input class="w-full bg-black border border-zinc-700 px-4 py-2.5 rounded-lg font-body-md text-white placeholder:text-zinc-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Ej. El Duro del Flow / Santi" required="" type="text"></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-3"><div class="flex flex-col gap-1"><label class="font-mono text-label-sm uppercase tracking-wider text-zinc-300 flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-secondary">checkroom</span>Nivel de tu Pinta</label><select class="w-full bg-black border border-zinc-700 px-3 py-2.5 rounded-lg font-body-sm text-white focus:outline-none focus:border-secondary transition-all"><option selected="" value="lampara">Pinta Muy Lámpara (Flow 100)</option><option value="oversized">Streetwear Oversized</option><option value="legendario">Aura S-Tier Inalcanzable</option></select></div><div class="flex flex-col gap-1"><label class="font-mono text-label-sm uppercase tracking-wider text-zinc-300 flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">group_add</span>¿Vienes con Parche?</label><select class="w-full bg-black border border-zinc-700 px-3 py-2.5 rounded-lg font-body-sm text-white focus:outline-none focus:border-primary transition-all"><option value="solo">Vengo solo a farmear aura</option><option selected="" value="combo">+1 Acompañante fiel</option><option value="corillo">Con todo el corillo completo</option></select></div></div><button class="mt-2 w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-primary text-black font-headline-md text-base font-bold tracking-widest uppercase shadow-[4px_4px_0_#ff4a8d] hover:bg-[#ebff1a] hover:shadow-[0_0_30px_rgba(217,239,0,0.8)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border-2 border-black" type="submit"><span class="material-symbols-outlined text-[22px]">confirmation_number</span>CONFIRMAR ASISTENCIA // RECLAMAR ACCESO</button><p class="font-mono text-[10px] text-center text-zinc-400">* Acceso libre de parte de Jhojan y Alejandro para amigos con aura comprobada. Casa de Eventos Quiroga-López.</p></form></div></div>
 </div>
 </section>
-<!-- Script interactivo optimizado: contador + carga diferida del video + audio compatible con móviles -->
+<!-- Script interactivo vanilla para microinteracciones y control de video con sonido al bajar -->
 <script>
-(function () {
-  'use strict';
-
-  // Contador de segundos visual
-  let seconds = 45;
-  const secEl = document.getElementById('count-secs');
-  if (secEl) {
-    window.setInterval(function () {
-      seconds = seconds > 0 ? seconds - 1 : 59;
-      secEl.textContent = seconds < 10 ? '0' + seconds : String(seconds);
-    }, 1000);
-  }
-
-  const video = document.getElementById('hero-street-video');
-  const soundBtn = document.getElementById('toggle-sound-btn');
-  const soundIcon = document.getElementById('sound-icon');
-  const soundText = document.getElementById('sound-btn-text');
-
-  if (!video) return;
-
-  let userUnlockedAudio = false;
-  let videoPrepared = false;
-  let videoVisible = false;
-
-  function updateSoundUI() {
-    const muted = video.muted;
-    if (soundIcon) soundIcon.textContent = muted ? 'volume_off' : 'volume_up';
-    if (soundText) soundText.textContent = muted ? 'ACTIVAR AUDIO' : 'AUDIO ON (100%)';
-    if (soundBtn) {
-      soundBtn.classList.toggle('bg-primary', !muted);
-      soundBtn.classList.toggle('text-black', !muted);
-      soundBtn.classList.toggle('bg-black/90', muted);
-      soundBtn.classList.toggle('text-primary', muted);
-    }
-  }
-
-  function prepareVideo() {
-    if (videoPrepared) return;
-    videoPrepared = true;
-    video.preload = 'metadata';
-    video.load();
-  }
-
-  function tryPlay() {
-    if (!videoVisible) return;
-    prepareVideo();
-    video.muted = !userUnlockedAudio;
-    video.volume = 1;
-    const p = video.play();
-    if (p && typeof p.catch === 'function') {
-      p.catch(function () {
-        video.muted = true;
-        updateSoundUI();
-        const fallback = video.play();
-        if (fallback && typeof fallback.catch === 'function') fallback.catch(function(){});
-      });
-    }
-    updateSoundUI();
-  }
-
-  // Solo un gesto real del usuario puede habilitar audio en móviles.
-  function unlockAudio() {
-    userUnlockedAudio = true;
-    if (videoVisible) {
-      video.muted = false;
-      video.volume = 1;
-      const p = video.play();
-      if (p && typeof p.catch === 'function') p.catch(function(){});
-      updateSoundUI();
-    }
-    window.removeEventListener('pointerdown', unlockAudio);
-    window.removeEventListener('keydown', unlockAudio);
-  }
-
-  window.addEventListener('pointerdown', unlockAudio, { once: true, passive: true });
-  window.addEventListener('keydown', unlockAudio, { once: true });
-
-  if (soundBtn) {
-    soundBtn.addEventListener('click', function (event) {
-      event.stopPropagation();
-      userUnlockedAudio = true;
-      prepareVideo();
-      video.muted = !video.muted;
-      video.volume = 1;
-      if (!video.muted && video.paused) {
-        const p = video.play();
-        if (p && typeof p.catch === 'function') p.catch(function(){});
+    (function() {
+      // Contador regresivo
+      let seconds = 45;
+      const secEl = document.getElementById('count-secs');
+      if (secEl) {
+        setInterval(() => {
+          seconds = seconds > 0 ? seconds - 1 : 59;
+          secEl.innerText = seconds < 10 ? '0' + seconds : seconds;
+        }, 1000);
       }
-      updateSoundUI();
-    });
-  }
 
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        videoVisible = entry.isIntersecting && entry.intersectionRatio >= 0.2;
-        if (entry.isIntersecting) {
-          prepareVideo();
-          tryPlay();
+      // Reproducción automática con sonido al hacer scroll hasta el video
+      const video = document.getElementById('hero-street-video');
+      const soundBtn = document.getElementById('toggle-sound-btn');
+      const soundIcon = document.getElementById('sound-icon');
+      const soundText = document.getElementById('sound-btn-text');
+      let userUnlockedAudio = false;
+
+      function updateSoundUI() {
+        if (!video) return;
+        if (video.muted) {
+          if (soundIcon) soundIcon.innerText = 'volume_off';
+          if (soundText) soundText.innerText = 'ACTIVAR AUDIO';
+          if (soundBtn) {
+            soundBtn.classList.remove('bg-primary', 'text-black');
+            soundBtn.classList.add('bg-black/90', 'text-primary');
+          }
         } else {
-          video.pause();
+          if (soundIcon) soundIcon.innerText = 'volume_up';
+          if (soundText) soundText.innerText = 'AUDIO ON (100%)';
+          if (soundBtn) {
+            soundBtn.classList.add('bg-primary', 'text-black');
+            soundBtn.classList.remove('bg-black/90', 'text-primary');
+          }
         }
-      });
-    }, {
-      threshold: [0, 0.2, 0.5],
-      rootMargin: '220px 0px 220px 0px'
-    });
-    observer.observe(video);
-  } else {
-    // Navegadores antiguos: carga normal y controles disponibles.
-    prepareVideo();
-  }
+      }
 
-  document.addEventListener('visibilitychange', function () {
-    if (document.hidden) {
-      video.pause();
-    } else if (videoVisible) {
-      tryPlay();
-    }
-  }, { passive: true });
+      // Desbloquear audio en el primer toque de usuario en la pantalla si el navegador lo requiere
+      const enableAudioContext = () => {
+        userUnlockedAudio = true;
+        if (video) {
+          video.muted = false;
+          video.volume = 1.0;
+          updateSoundUI();
+        }
+        window.removeEventListener('click', enableAudioContext);
+        window.removeEventListener('touchstart', enableAudioContext);
+      };
+      window.addEventListener('click', enableAudioContext, { once: true });
+      window.addEventListener('touchstart', enableAudioContext, { once: true });
 
-  updateSoundUI();
-})();
-</script>
-</div></main><footer class="performance-section relative z-10 w-full bg-black border-t-2 border-zinc-800 mt-space-xl"><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin py-8 flex flex-col md:flex-row items-center justify-between gap-6"><div class="flex flex-col items-center md:items-start gap-1"><div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-surface-container border border-primary/50 font-mono text-label-sm text-primary"><span class="text-secondary">👑</span> // CALLE SIEMPRE REAL • BUENA GENTE MEJOR PLAN</div><p class="font-body-sm text-zinc-400 text-center md:text-left">Más amigos + más aura + mejores historias. Nos vemos en el Quiroga-López.</p></div><div class="footer-actions flex items-center gap-3"><a class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container text-primary font-mono text-label-sm border border-zinc-700 hover:border-primary transition-all" href="#registro-invitacion"><span class="material-symbols-outlined text-[18px]">how_to_reg</span>Confirmar Pase</a><a class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container text-secondary font-mono text-label-sm border border-zinc-700 hover:border-secondary transition-all" href="#transmision-video"><span class="material-symbols-outlined text-[18px]">videocam</span>Transmisión</a><a class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container text-white font-mono text-label-sm border border-zinc-700 hover:border-white transition-all" href="#progreso-aura"><span class="material-symbols-outlined text-[18px]">bolt</span>Farmeo de Aura</a></div></div><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin pb-6 text-center font-mono text-xs text-zinc-500">© 2026 FARMEAR AURA // STREET CYPHER • CELEBRANDO NUESTROS TICINCO</div></footer>
+      if (soundBtn && video) {
+        soundBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          video.muted = !video.muted;
+          video.volume = 1.0;
+          if (!video.muted && video.paused) {
+            video.play();
+          }
+          updateSoundUI();
+        });
+      }
+
+      if (video) {
+        video.volume = 1.0;
+        video.muted = false;
+
+        // IntersectionObserver para detectar cuando el usuario hace scroll hacia el video
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              video.muted = false;
+              video.volume = 1.0;
+              const playPromise = video.play();
+              if (playPromise !== undefined) {
+                playPromise.then(() => {
+                  updateSoundUI();
+                }).catch(() => {
+                  // Si el navegador bloquea autoplay con sonido antes del primer click, reproducir muteado y pedir toque
+                  video.muted = true;
+                  video.play();
+                  updateSoundUI();
+                });
+              }
+            } else {
+              // Pausar si sale del viewport
+              video.pause();
+            }
+          });
+        }, {
+          threshold: 0.3
+        });
+
+        observer.observe(video);
+      }
+    })();
+  </script>
+</div></main><footer class="relative z-10 w-full bg-black border-t-2 border-zinc-800 mt-space-xl"><div class="max-w-7xl mx-auto px-margin py-8 flex flex-col md:flex-row items-center justify-between gap-6"><div class="flex flex-col items-center md:items-start gap-1"><div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-surface-container border border-primary/50 font-mono text-label-sm text-primary"><span class="text-secondary">👑</span> // CALLE SIEMPRE REAL • BUENA GENTE MEJOR PLAN</div><p class="font-body-sm text-zinc-400 text-center md:text-left">Más amigos + más aura + mejores historias. Nos vemos en el Quiroga-López.</p></div><div class="flex items-center gap-3"><a class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container text-primary font-mono text-label-sm border border-zinc-700 hover:border-primary transition-all" href="#registro-invitacion"><span class="material-symbols-outlined text-[18px]">how_to_reg</span>Confirmar Pase</a><a class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container text-secondary font-mono text-label-sm border border-zinc-700 hover:border-secondary transition-all" href="#transmision-video"><span class="material-symbols-outlined text-[18px]">videocam</span>Transmisión</a><a class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container text-white font-mono text-label-sm border border-zinc-700 hover:border-white transition-all" href="#progreso-aura"><span class="material-symbols-outlined text-[18px]">bolt</span>Farmeo de Aura</a></div></div><div class="max-w-7xl mx-auto px-margin pb-6 text-center font-mono text-xs text-zinc-500">© 2026 FARMEAR AURA // STREET CYPHER • CELEBRANDO NUESTROS TICINCO</div></footer>
 
 </body></html>
